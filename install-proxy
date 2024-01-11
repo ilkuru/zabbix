@@ -1,4 +1,5 @@
 # Настройка zabbix proxy LTS
+![thb](https://github.com/vprimin/pub/blob/main/Manuals/images/zproxy.png)
 
 *Всем привет. В данной статье рассмотрим как настраивать Zabbix Proxy 6.0 LTS*
 
@@ -6,8 +7,9 @@
 Мы будем использовать пакет Ubuntu Server (minimized) 22.04 LTS
 
 
+
 ```
-sudo su
+sudo su 
 apt update
 apt upgrade
 reboot
@@ -30,7 +32,7 @@ apt install zabbix-proxy-sqlite3
 ```
 openssl rand -hex 32 > /etc/zabbix/zabbix_proxy.psk
 ```
-Далее выводим этот ключ на экран командой
+Далее выводим этот ключ на экран командой 
 ```
 
 tail /etc/zabbix/zabbix_proxy.psk
@@ -58,6 +60,4 @@ systemctl enable zabbix-proxy
 Выставляем такой же Proxу name как и hostname у прокси сервера.\
 На вкладке encryption выбираем psk и копируем в поля PSK identity и PSK такие же значение как и у прокси.
 
-Все!
-
-from https://github.com/vprimin/pub/blob/main/Manuals/zabbix-proxy.md
+Все!  
